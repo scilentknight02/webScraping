@@ -1,0 +1,165 @@
+/* Global Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Flight Container Styling */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  margin: 15px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.row:hover {
+  transform: translateY(-5px);
+}
+
+/* Airline Logo and Info */
+.col-sm-2 img {
+  max-height: 75px;
+  width: auto;
+}
+
+.airlines-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+/* Price Section */
+.price {
+  color: #16a085;
+  font-size: 16px;
+}
+
+.price .flight_groups_total_cost_2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price-breakdown {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+/* Flight Timing and Details */
+.col-sm-3 {
+  text-align: right;
+}
+
+.location {
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.time,
+.date {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+/* Flight Duration and Baggage */
+.fgt-duration {
+  text-align: center;
+}
+
+.flight-time {
+  font-size: 16px;
+  font-weight: bold;
+  color: #16a085;
+}
+
+.chip {
+  display: inline-block;
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  margin: 3px;
+}
+
+.chip i {
+  margin-right: 5px;
+}
+
+.baggage span {
+  font-size: 14px;
+}
+
+/* Buttons */
+.btn-submit-book-now {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-submit-book-now:hover {
+  background-color: #3498db;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .col-sm-2,
+  .col-sm-3 {
+    text-align: left;
+  }
+
+  .price {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .btn-submit-book-now {
+    width: auto;
+  }
+
+  .col-xs-6 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .airlines-name {
+    font-size: 16px;
+  }
+
+  .price .flight_groups_total_cost_2 {
+    font-size: 18px;
+  }
+
+  .flight-time {
+    font-size: 14px;
+  }
+}

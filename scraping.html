@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍃 Scraping 🍃</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+        background: linear-gradient(to bottom, #a1d8f0, #79c0e0);
+        color: #512d7f;
+        font-size: 2rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        margin: 20px 10px;
+        padding: 20px;
+        transform: perspective(500px) translateZ(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      h2:hover {
+        transform: perspective(500px) translateZ(20px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      }
+
+      .sn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1px;
+        width: 100vw;
+        background-color: rgb(80, 116, 116);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Web Scraping Using Python BeautifulSoup</h2>
+    <div class="sn">
+      --------------------------------- Flight 1
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-2"
+      id="anchor-flight-summary-1"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563700119-432805.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Buddha Air</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_2"> NPR 3,810 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_2">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">19:30</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">19:55</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 25 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_2"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_2"> 15 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_2"> NPR 3,810 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_2">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="2"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="2"
+          data-recommendation-num="1"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+
+    <div class="sn">
+      --------------------------------- Flight 2
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-3"
+      id="anchor-flight-summary-2"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563700092-287098.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Yeti Airlines</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_3"> NPR 3,810 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_3">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">19:20</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">19:45</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 25 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_3"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_3"> 20 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_3"> NPR 3,810 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_3">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="3"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="3"
+          data-recommendation-num="2"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+    <div class="sn">
+      --------------------------------- Flight 3
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-4"
+      id="anchor-flight-summary-3"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563699933-442199.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Shree Airlines</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_4"> NPR 4,110 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_4">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">10:05</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">10:25</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 20 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_4"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_4"> 20 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_4"> NPR 4,110 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_4">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="4"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="4"
+          data-recommendation-num="3"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+
+    <div class="sn">
+      --------------------------------- Flight 4
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-5"
+      id="anchor-flight-summary-4"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563699933-442199.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Shree Airlines</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_5"> NPR 4,110 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_5">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">13:10</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">13:30</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 20 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_5"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_5"> 20 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_5"> NPR 4,110 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_5">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="5"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="5"
+          data-recommendation-num="4"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+
+    <div class="sn">
+      --------------------------------- Flight 5
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-6"
+      id="anchor-flight-summary-5"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563700119-432805.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Buddha Air</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_6"> NPR 4,309 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_6">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">07:30</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">07:55</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 25 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_6"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_6"> 15 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_6"> NPR 4,309 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_6">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="6"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="6"
+          data-recommendation-num="5"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+
+    <div class="sn">
+      --------------------------------- Flight 6
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-7"
+      id="anchor-flight-summary-6"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563700119-432805.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Buddha Air</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_7"> NPR 4,309 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_7">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">08:20</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">08:45</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 25 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_7"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_7"> 15 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_7"> NPR 4,309 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_7">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="7"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="7"
+          data-recommendation-num="6"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+
+    <div class="sn">
+      --------------------------------- Flight 7
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-8"
+      id="anchor-flight-summary-7"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563700119-432805.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Buddha Air</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_8"> NPR 4,309 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_8">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">08:55</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">09:20</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 25 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_8"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_8"> 15 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_8"> NPR 4,309 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_8">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="8"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="8"
+          data-recommendation-num="7"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+
+    <div class="sn">
+      --------------------------------- Flight 8
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-9"
+      id="anchor-flight-summary-8"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563700119-432805.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Buddha Air</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_9"> NPR 4,309 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_9">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">09:45</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">10:10</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 25 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_9"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_9"> 15 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_9"> NPR 4,309 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_9">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="9"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="9"
+          data-recommendation-num="8"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+
+    <div class="sn">
+      --------------------------------- Flight 9
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-10"
+      id="anchor-flight-summary-9"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563700119-432805.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Buddha Air</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_10"> NPR 4,309 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_10">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">10:35</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">11:00</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 25 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_10"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_10"> 15 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_10"> NPR 4,309 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_10">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="10"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="10"
+          data-recommendation-num="9"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+
+    <div class="sn">
+      --------------------------------- Flight 10
+      ---------------------------------
+    </div>
+    <a
+      class="row"
+      data-filter-stops="0"
+      data-toggle="collapse"
+      href="#flight-details-11"
+      id="anchor-flight-summary-10"
+    >
+      <div class="col-sm-2 col-xs-12 text-center">
+        <img
+          alt=""
+          class="airlines-logo mh75"
+          src="https://sastotickets-flights.s3.ap-southeast-1.amazonaws.com/airlines/1563700119-432805.png"
+        />
+        <p class="airlines-name" style="text-transform: none">Buddha Air</p>
+        <div class="price text-right visible-xs">
+          <span class="pull-left"> Ticket Price </span>
+          <span class="flight_groups_total_cost_11"> NPR 4,309 </span>
+          <small class="fa fa-info-circle"> </small>
+          <div class="price-breakdown flight_groups_price_breakdown_11">
+            Cash Back = 50
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 text-right">
+        <p class="location">Kathmandu (KTM)</p>
+        <p class="time">12:00</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <p class="location">Pokhara (PKR)</p>
+        <p class="time">12:25</p>
+        <p class="date">Fri, May 23, 2025</p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center fgt-duration">
+        <p class="flight-time">00 Hr 25 Min</p>
+        <p class="text-muted default-theme-color baggage">
+          <span
+            class="handcarry chip popup"
+            data-info-baggage="Hand Carry"
+            popup-data="Hand Carry"
+          >
+            <i class="fas fa-shopping-bag" style="border: none"> </i>
+            <span class="flight_groups_cabin_11"> 5 </span>
+            Kg
+          </span>
+          <span
+            class="luggage chip popup"
+            data-info-baggage="Luggage"
+            popup-data="Luggage"
+          >
+            <i class="fas fa-suitcase" style="border: none; padding-top: 7px">
+            </i>
+            <span class="flight_groups_luggage_11"> 15 </span>
+            Kg
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-2 col-xs-12 text-center">
+        <div class="price hidden-xs">
+          <span class="flight_groups_total_cost_11"> NPR 4,309 </span>
+          <div class="price-breakdown flight_groups_price_breakdown_11">
+            Cash Back = 50
+          </div>
+        </div>
+        <button
+          class="btn-book-now btn-submit-book-now"
+          data-flight-collapse-button="11"
+          type="button"
+        >
+          View Details
+        </button>
+        <button
+          class="btn-book-now btn-submit-book-now btn-with-modal"
+          data-allow-guest="yes"
+          data-booking-num="11"
+          data-recommendation-num="10"
+          data-target="#login-modal"
+          style="display: none"
+          type="button"
+        >
+          book now
+        </button>
+        <p class="text-muted">
+          <span class="chip popup" popup-data="Economy">
+            <i style="width: 37px"> ECO </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="No Meals">
+            <i class="fas fa-utensils"> </i>
+          </span>
+          <span class="chip chip-slash popup" popup-data="Non Refundable">
+            <i class="fw-bold"> R </i>
+          </span>
+        </p>
+      </div>
+    </a>
+  </body>
+</html>
